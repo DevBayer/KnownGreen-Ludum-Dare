@@ -34,16 +34,10 @@ function DoMapInfo(){
 global $db;
 $Array=array();
 $Array2['result']=array();
-//$Array2['results']=array();
 $results = $db->select("country");
 foreach($results as $item){
 	$cache = $item['name'];
-	//array_push($Array2['results'], Array($cache => $item['LVL']));
 	$Array2['result'][$item['iso']] = $item['LVL'];
-	//$Array2[]=Array($cache => $item['LVL']);
-	//$Array['results']=Array($cache => $item['LVL']);
-	//$Array2['results'] = Array($cache => $item['LVL']);
-	//var_dump($results);
 	$results2 = $db->select("reg", "Country = '".$item['name']."'");
 	if(empty($results2)){
 	$Array[$cache]=array("People" => 0, "1" => Array("","",""), "2" => Array("","",""), "3" => Array("","",""), "4" => Array("","",""), "5" => Array("","","") );
@@ -91,19 +85,17 @@ foreach($results as $item){
 }
 }
 
-//$Array['results']=$Array2['results'];
-//var_dump($Array2);
 return json_encode(array_merge($Array,$Array2));
 }
 
 function DoReturnTypeRepeats($country){
-global $db; //select reg.type, reg.country,count(*) as TotalTipos from reg group by reg.type
+global $db;
 $results = $db->select("reg", "reg.Country = '$country'", "", "reg.type,count(*) as TotalTipos, ROUND(AVG(reg.Calification),0) as Promedio", "reg.type", "Promedio DESC, TotalTipos DESC");
 return $results;
 }
 
 function DoChangetoName($ref){
-global $db; //select reg.type, reg.country,count(*) as TotalTipos from reg group by reg.type
+global $db;
 $results = $db->select("strain", "ID = $ref", "", "name", "");
 return $results[0]['name'];
 }
@@ -207,14 +199,10 @@ $color=9;
 }else if($people > 1000){
 $color=10;
 }
-//return $color;
 
 $update = array("LVL" => $color);
 $db->update("country", $update, "name = '".$s."'");
 
-//echo $results[0]["People"];
-//var_dump($db);
-//var_dump($results);
 }
 
 function DoAddReport($s){

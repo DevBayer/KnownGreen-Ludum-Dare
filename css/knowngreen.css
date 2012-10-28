@@ -1,0 +1,105 @@
+.navbar-inner {
+border:none !important;
+background: #FFF !important;
+
+}
+
+.brand.logo { 
+background:url('../img/logo.png') no-repeat -5% center;
+text-indent: -9999px;
+width:150px;
+height:50px;
+}
+
+.nav-collapse.collapse {
+height: auto;
+margin-top: 15px;
+}
+
+hr.line{   
+width:100%;   
+height:0px;/*solo queremos borde*/   
+text-align:left;  
+border-top:0px;/*quita el grosor extra de Opera y FFox*/   
+border-bottom:whiteSmoke dashed 1px;  
+margin:0;
+}
+
+.map-list  li.nav-header{
+margin-top:0px !important;
+background-color: #08C;
+color:white;
+min-width:150px;
+max-width:200px;
+}
+
+.map-list  li.nav-header.state{
+background-color: transparent;
+margin-bottom:5px;
+}
+
+#mark-index {
+padding:50px 0 50px 0;
+}
+
+#mark-index h1 {
+font-size:60px;
+}
+
+#mark-index .lead {
+font-size:24px;
+}
+
+#mark-about h1 {
+font-size:24px;
+}
+#mark-about {
+padding:50px 0 50px 0;
+}
+#mark-about a {
+color:#444;
+}
+#mark-about .lead {
+font-size:14px;
+}
+
+#world-map-gdp { float:left; }
+#status-info { float:left; width:200px; height:554px; background:#606060; border-left:#444 solid 2px; }
+#status-info  li.nav-header{
+color:white;
+font-size:16px;
+}
+#status-info  li.active{
+margin-top:5px;
+margin-bottom:5px;
+background:#CCC !important;
+}
+#status-info  li.active a{
+background:#444;
+}
+
+.footer-content {
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+}
+
+.footer-content a {
+color:#444;
+}
+
+.footer-content .breadcrumb {
+width:445px;
+float:right;
+padding:0;
+background:none;
+}
+
+.footer-content .layer-text{
+float:left;
+}

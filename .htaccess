@@ -1,0 +1,12 @@
+Options All -Indexes
+Options +FollowSymlinks
+
+<IfModule mod_rewrite.c> 
+RewriteEngine on
+RewriteRule ^home index.php?pag=home
+RewriteRule ^strains index.php?pag=strains
+RewriteRule ^about index.php?pag=about
+RewriteRule ^colabore index.php?form=colabore
+RewriteRule ^footprint index.php?form=footprint
+RewriteRule ^report_(.*) report.php?id=$1
+</IfModule>

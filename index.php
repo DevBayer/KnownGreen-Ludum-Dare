@@ -61,7 +61,6 @@ include("config/config.inc.php");
 	<div class="container">
 	<?php
 	if(isset($_POST) && isset($_GET['form']) && $_GET['form']=="colabore" && $colabore==true){
-		//var_dump($_POST);
 		if($_POST['name'] && $_POST['desc']){
 		if(DoExistStrain($_POST['name']) == false){
 		$_POST['desc'] = substr($_POST['desc'],0,200)."...";
